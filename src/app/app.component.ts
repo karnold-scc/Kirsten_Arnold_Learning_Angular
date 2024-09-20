@@ -18,7 +18,7 @@ import {CommonModule} from "@angular/common";
 // }
 
 export class AppComponent {
-  title = 'User Generation';
+  title = 'Student List';
   user1: User = {
     id: 1, fname: "Kirsten", lname: "Arnold",
     department: "Programming", isAdmin: false
