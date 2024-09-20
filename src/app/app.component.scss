@@ -2,29 +2,32 @@
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: rgb(195, 223, 224);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 h2 {
   text-align: center;
-  color: #333;
+  color: rgb(59, 118, 120);
   margin-bottom: 20px;
+  font-size: 2em;
 }
 .user-card {
-  background-color: #fff;
+  text-align:center;
+  background-color: rgb(242, 255, 255);
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 5px solid darkslategrey;
 }
 .user-card h3 {
+  font-size: 1.6em;
   margin: 0;
-  color: #007bff;
+  color: rgb(11, 82, 82);
 }
 .user-card p {
   margin: 5px 0;
-  color: #555;
+  color: rgb(59, 118, 120);
 }
 .user-card p:first-child {
   margin-top: 10px;

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {User} from "./shared/models/user";
 import {CommonModule} from "@angular/common";
+import {A2} from "./shared/models/a2";
 
 @Component({
   selector: 'app-root',
@@ -19,29 +20,33 @@ import {CommonModule} from "@angular/common";
 
 export class AppComponent {
   title = 'Student List';
-  user1: User = {
-    id: 1, fname: "Kirsten", lname: "Arnold",
-    department: "Programming", isAdmin: false
-  };
-  user2: User = {
-    id: 2, fname: "Taylor", lname:
-      "Swift", department: "Web Dev", isAdmin: true
-  };
-  //Can declare values either way
-  userList: User[] = //any[] would have worked as well
-    [this.user1, this.user2,
+  userList: A2[] = //any[] would have worked as well
+    [
       {
-        id: 3, fname: "Jude", lname: "Duarte", department:
-          "Programming", isAdmin: false
+        name: "Kirsten", birthYear : 2003, program: "Computer Programming",
+        semester: 3, isStudent: true
       },
       {
-        id: 4, fname: "Jane", lname: "Doe", department:
-          "Programming", isAdmin: true
+        name: "Joe", birthYear : 2001, program: "Construction",
+        semester: 4, isStudent: true
+      },
+      {
+        name: "Alice", birthYear : 2005, program: "Nursing",
+        semester: 0, isStudent: true
+      },
+      {
+        name: "Fred", birthYear : 1990, program: "Teacher - Computer Networks",
+        semester: 4, isStudent: false
+      },
+      {
+        name: "Jenny", birthYear : 2003, program: "Computer Programming",
+        semester: 1, isStudent: true
+      },
+      {
+        name: "John", birthYear : 2004, program: "Nursing",
+        semester: 2, isStudent: true
       }
     ]
 
-  toggleAdminStatus(user: User): void {
-    user.isAdmin = !user.isAdmin;
-  }
 }
 //argument of a variable called user, which is type User and returns void
