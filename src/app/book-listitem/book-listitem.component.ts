@@ -9,5 +9,5 @@ import {Book} from "../shared/models/Book";
   styleUrl: './book-listitem.component.css'
 })
 export class BookListitemComponent {
-  @Input() book?: Book;
+  @Input() book?: any;
 }
