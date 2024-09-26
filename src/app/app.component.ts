@@ -2,51 +2,48 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {User} from "./shared/models/user";
 import {CommonModule} from "@angular/common";
-import {A2} from "./shared/models/a2";
+import {A2} from "./shared/models/Book";
+import {ContentCardComponent} from "./content-card/content-card.component";
+import {BookListComponent} from "./book-list/book-list.component";
+interface IContent{
+    id:number,
+    imageUrl:string,
+    body:string,
+    type:string
 
+}
+// @ts-ignore
+// @ts-ignore
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, ContentCardComponent, BookListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-// export class AppComponent {
-//   title  = 'Kirsten';
-//   year  = 2024;
-//   course = "MAD 307";
-//   protected readonly AppComponent1 = AppComponent1;
-// }
 
-export class AppComponent {
-  title = 'Student List';
-  userList: A2[] = //any[] would have worked as well
-    [
-      {
-        name: "Kirsten", birthYear : 2003, program: "Computer Programming",
-        semester: 3, isStudent: true
-      },
-      {
-        name: "Joe", birthYear : 2001, program: "Construction",
-        semester: 4, isStudent: true
-      },
-      {
-        name: "Alice", birthYear : 2005, program: "Nursing",
-        semester: 0, isStudent: true
-      },
-      {
-        name: "Fred", birthYear : 1990, program: "Teacher - Computer Networks",
-        semester: 4, isStudent: false
-      },
-      {
-        name: "Jenny", birthYear : 2003, program: "Computer Programming",
-        semester: 1, isStudent: true
-      },
-      {
-        name: "John", birthYear : 2004, program: "Nursing",
-        semester: 2, isStudent: true
-      }
-    ]
-
-}
 //argument of a variable called user, which is type User and returns void
+export class AppComponent {
+  title?: "";
+
+contentArray:IContent[] = [
+  {
+    id: 1,
+    imageUrl: 'https://angular.io/assets/images/logos/angular/angular.png',
+    body: 'This is the body of the content' ,
+   type: 'news'
+  },
+  {
+    id: 2,
+    imageUrl: 'https://angular.io/assets/images/logos/angular/angular.png',
+    body: 'This is the body of the second content' ,
+    type: 'news'
+  },
+  {
+    id: 3,
+    imageUrl: 'https://angular.io/assets/images/logos/angular/angular.png',
+    body: 'This is the body of the last content' ,
+    type: 'news'
+  }
+];
+}
