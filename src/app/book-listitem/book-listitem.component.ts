@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Book} from "../shared/models/Book";
+import {BookService} from "../Services/book.service";
 
 @Component({
   selector: 'app-book-listitem',
@@ -10,4 +11,5 @@ import {Book} from "../shared/models/Book";
 })
 export class BookListitemComponent {
   @Input() book?: any;
+  book = BookService.getBookByID(0);
 }
