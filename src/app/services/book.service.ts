@@ -15,26 +15,26 @@ export class BookService {
     return of(bookList);
   }
   //Create book
-  // addBook(newBook:Book) : Observable<Book[]>{
-  //   this.books.push(newBook)
-  //   return of(this.books);
-  // }
-  //
-  // //Update an Existing book
-  // updateStudent(updatedBook: Book): Observable<Book[]> {
-  //   const index = this.books.findIndex(book => book.id === updatedBook.id);
-  //   if (index !== -1) {
-  //     this.books[index] = updatedBook;
-  //   }
-  //   return of(this.books);
-  // }
-  // //Delete: Remove a book by ID
-  // deleteBook(bookId : number): Observable<Book[]> {
-  //   this.books = this.books.filter(book => book.id !== bookId);
-  //   return of(this.books);
-  // }
-  // getBookByID(bookID: number): Observable<Book | undefined> {
-  //   const book = this.books.find(Book => book.id === bookID);
-  //   return of(book);
-  // }
+  addBook(newBook:Book) : Observable<Book[]>{
+    this.books.push(newBook)
+    return of(this.books);
+  }
+
+  //Update an Existing book
+  updateStudent(updatedBook: Book): Observable<Book[]> {
+    const index = this.books.findIndex(book => book.id === updatedBook.id);
+    if (index !== -1) {
+      this.books[index] = updatedBook;
+    }
+    return of(this.books);
+  }
+  //Delete: Remove a book by ID
+  deleteBook(bookId : number): Observable<Book[]> {
+    this.books = this.books.filter(book => book.id !== bookId);
+    return of(this.books);
+  }
+  getBookByID(bookID: number): Observable<Book | undefined> {
+    const book = this.books.find(Book => book.id === bookID);
+    return of(book);
+  }
 }
