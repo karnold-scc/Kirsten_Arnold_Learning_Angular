@@ -15,26 +15,26 @@ export class BookService {
     return of(bookList);
   }
   //Create book
-  addBook(newBook:Book) : Observable<Book[]>{
-    this.books.push(newBook)
-    return of(this.books);
-  }
-
-  //Update an Existing book
-  updateStudent(updatedBook: Book): Observable<Book[]> {
-    const index = this.books.findIndex(user => user.id === updatedStudent.id);
-    if (index !== -1) {
-      this.students[index] = updatedStudent;
-    }
-    return of(this.students);
-  }
-  //Delete: Remove a user by ID
-  deleteStudent(studentId: number): Observable<User[]> {
-    this.students = this.students.filter(user => user.id !== studentId);
-    return of(this.students);
-  }
-  getStudentById(studentId: number): Observable<User | undefined> {
-    const student = this.students.find(user => user.id === studentId);
-    return of(student);
-  }
+  // addBook(newBook:Book) : Observable<Book[]>{
+  //   this.books.push(newBook)
+  //   return of(this.books);
+  // }
+  //
+  // //Update an Existing book
+  // updateStudent(updatedBook: Book): Observable<Book[]> {
+  //   const index = this.books.findIndex(book => book.id === updatedBook.id);
+  //   if (index !== -1) {
+  //     this.books[index] = updatedBook;
+  //   }
+  //   return of(this.books);
+  // }
+  // //Delete: Remove a book by ID
+  // deleteBook(bookId : number): Observable<Book[]> {
+  //   this.books = this.books.filter(book => book.id !== bookId);
+  //   return of(this.books);
+  // }
+  // getBookByID(bookID: number): Observable<Book | undefined> {
+  //   const book = this.books.find(Book => book.id === bookID);
+  //   return of(book);
+  // }
 }
