@@ -9,7 +9,7 @@ import {Book} from "../shared/models/Book";
   styleUrl: './book-listitem.component.css'
 })
 export class BookListitemComponent {
-  @Input() book?: any;
+  @Input() book?: Book;
   //Not sure if this is correct - Matt
   //book = BookService.getBookByTitle(0);
 }

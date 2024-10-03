@@ -20,14 +20,18 @@ import { Observable } from 'rxjs';
 })
 //We need oninit so we can populate the data before the component finishes init
 export class BookListComponent implements OnInit{
-  bookList!: Observable<Book[]>;
+  bookList: Book[] = [];
   //Rewritting your constructor to use the BookService correctly - Matt
   //Just setting up DI with the service in the constructor
   constructor(private bookService: BookService) { }
 
   //We need to call the service to get the data
   ngOnInit(): void {
-    this.bookList = this.bookService.getBooks();
+    this.bookService.getBooks().subscribe({
+      next: ( data: Book[]) => this.bookList = data,
+      error: err => console.error("Error fetching Books", err),
+      complete: () => console.log("Book data fetch complete!")
+    });
   }
 
 }

@@ -8,6 +8,7 @@ import {BookListComponent} from "./book-list/book-list.component";
 import {BookListitemComponent} from "./book-listitem/book-listitem.component";
 //Fixed Import - Matt
 import {BookService} from "./services/book.service";
+import {bookList} from "./shared/data/mock-content";
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,4 +22,5 @@ export class AppComponent {
   title?: "";
 
 
+  protected readonly bookList = bookList;
 }

@@ -3,6 +3,6 @@ We need the async pipe becasue The *ngFor directive cannot directly iterate over
 to or used with the async pipe.
 
 We havent learned this yet, but thats okay-->
-<div *ngFor="let book of bookList | async; let i=index">
+<div *ngFor="let book of bookList; let i=index">
   <app-book-listitem [book]="book" [ngClass]="{'even-item' : i%2 === 0, 'odd-item' : i%2 === 1}"></app-book-listitem>
 </div>
