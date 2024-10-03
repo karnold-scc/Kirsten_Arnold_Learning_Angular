@@ -1,5 +1,6 @@
-<div><h3>{{book?.title}}</h3>
-<h3>{{book?.genre}}</h3>
-<h3>{{book?.author}}</h3>
-<h3>{{book?.yearReleased}}</h3>
+<div *ngIf="book" class = "book-list-item">
+  <h3 class = "book-title">{{book.title}}</h3>
+  <h3 class = "book-genre">{{book.genre}}</h3>
+  <h3 class = "book-author">{{book.author}}</h3>
+  <h3 class = "book-year-released">{{book.yearReleased}}</h3>
 </div>

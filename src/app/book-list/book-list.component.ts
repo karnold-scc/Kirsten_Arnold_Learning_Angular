@@ -26,7 +26,7 @@ export class BookListComponent implements OnInit{
   constructor(private bookService: BookService) { }
 
   //We need to call the service to get the data
-  ngOnInit(): void {
+  ngOnInit(): void {//Subscribed to the service to get the data
     this.bookService.getBooks().subscribe({
       next: ( data: Book[]) => this.bookList = data,
       error: err => console.error("Error fetching Books", err),
