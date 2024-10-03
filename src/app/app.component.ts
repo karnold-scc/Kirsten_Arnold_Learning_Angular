@@ -6,7 +6,8 @@ import {Book} from "./shared/models/Book";
 import {ContentCardComponent} from "./content-card/content-card.component";
 import {BookListComponent} from "./book-list/book-list.component";
 import {BookListitemComponent} from "./book-listitem/book-listitem.component";
-import {BookService} from "../Services/book.service";
+//Fixed Import - Matt
+import {BookService} from "./services/book.service";
 @Component({
   selector: 'app-root',
   standalone: true,
