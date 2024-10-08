@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 import {User} from "./shared/models/user";
 import {CommonModule} from "@angular/common";
 import {Book} from "./shared/models/Book";
@@ -11,14 +11,14 @@ import {bookList} from "./shared/data/mock-content";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ContentCardComponent, BookListComponent, BookListitemComponent],
+  imports: [RouterOutlet, CommonModule, ContentCardComponent, BookListComponent, BookListitemComponent, RouterLinkActive, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 
 //argument of a variable called user, which is type User and returns void
 export class AppComponent {
-  title?: "";
+  title?: "MAD 307";
 
 
   protected readonly bookList = bookList;

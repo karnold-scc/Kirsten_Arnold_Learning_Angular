@@ -1,4 +1,13 @@
-<p>Here is the Singular Item:</p>
-<app-book-listitem [book] = "bookList[3]"></app-book-listitem>
-<br>
-<app-book-list></app-book-list>
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/book" routerLinkActive="active">Books List</a>
+    <a routerLink="/modify-book" routerLinkActive="active">Modify a Book!</a>
+  </nav>
+</div>
+
+<div class="app-container">
+  <h1>{{ title }}</h1>
+
+  <!--router outlet to display routed components -->
+  <router-outlet></router-outlet>
+</div>
