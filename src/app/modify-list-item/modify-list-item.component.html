@@ -1,0 +1,35 @@
+<!-- modify-student.component.html -->
+<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+  <!-- Title Field -->
+  <div class="form-group">
+    <label for="id">Title</label>
+    <input type="text" id="id" formControlName="id" />
+  </div>
+
+  <!-- Genre Field -->
+  <div class="form-group">
+    <label for="genre">Genre</label>
+    <input type="text" id="genre" formControlName="genre" />
+  </div>
+
+  <!-- Author Field -->
+  <div class="form-group">
+    <label for="author">Author</label>
+    <input type="text" id="author" formControlName="author" />
+  </div>
+
+  <!-- Year Released Field -->
+  <div class="form-group">
+    <label for="year">Year Released</label>
+    <input type="text" id="year" formControlName="year" />
+  </div>
+
+  <!-- Submit Button (Add or Update) -->
+  <button type="submit">Submit</button>
+
+  <!-- Delete Button (Always Displayed Now) -->
+  <button type="button" (click)="onDelete()">Delete</button>
+
+  <!-- Back Button -->
+  <button type="button" (click)="navigateToBookList()">Back to List</button>
+</form>
