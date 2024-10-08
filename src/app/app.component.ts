@@ -6,8 +6,7 @@ import {Book} from "./shared/models/Book";
 import {ContentCardComponent} from "./content-card/content-card.component";
 import {BookListComponent} from "./book-list/book-list.component";
 import {BookListitemComponent} from "./book-listitem/book-listitem.component";
-//Fixed Import - Matt
-import {BookService} from "./services/book.service";
+//import {BookService} from "./services/book.service";
 import {bookList} from "./shared/data/mock-content";
 @Component({
   selector: 'app-root',
