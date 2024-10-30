@@ -1,7 +1,6 @@
-import {Component, Input} from '@angular/core';
-import {Book} from "../shared/models/Book";
-import {NgIf, NgOptimizedImage} from "@angular/common";
-//import {NgOptimizedImage} from "@angular/common";
+import { Component, Input, OnInit } from '@angular/core';
+import { Book } from "../shared/models/Book";
+import { NgIf, NgOptimizedImage } from "@angular/common";
 
 @Component({
   selector: 'app-book-listitem',
@@ -11,10 +10,14 @@ import {NgIf, NgOptimizedImage} from "@angular/common";
     NgOptimizedImage
   ],
   templateUrl: './book-listitem.component.html',
-  styleUrl: './book-listitem.component.css'
+  styleUrls: ['./book-listitem.component.css']
 })
-export class BookListitemComponent {
+export class BookListitemComponent implements OnInit {
   @Input() book?: Book;
-  //Not sure if this is correct - Matt
-  //book = BookService.getBookByTitle(0);
+
+  ngOnInit() {
+    if (this.book && this.book.image) {
+      console.log("Book Url:" + this.book.image);
+    }
+  }
 }
