@@ -35,3 +35,53 @@ h2 {
 .user-card p:last-child {
   margin-bottom: 10px;
 }
+
+/* Navbar Container */
+.nav-bar {
+  background-color: #f2f2f2; /* Light grey background */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the text */
+}
+
+/* Navbar Links */
+.nav-bar nav {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.nav-bar a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover and Active States */
+.nav-bar a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+.nav-bar a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .nav-bar nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-bar a {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
