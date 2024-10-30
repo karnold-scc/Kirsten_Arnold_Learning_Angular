@@ -1,35 +1,33 @@
-<!-- modify-student.component.html -->
-<form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+<!-- modify-book.component.html -->
+<form class="book-form" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
   <!-- Title Field -->
   <div class="form-group">
-    <label for="id">Title</label>
-    <input type="text" id="id" formControlName="id" />
+    <label for="title">Title</label>
+    <input type="text" id="title" formControlName="title" class="form-control" />
   </div>
 
   <!-- Genre Field -->
   <div class="form-group">
     <label for="genre">Genre</label>
-    <input type="text" id="genre" formControlName="genre" />
+    <input type="text" id="genre" formControlName="genre" class="form-control" />
   </div>
 
   <!-- Author Field -->
   <div class="form-group">
     <label for="author">Author</label>
-    <input type="text" id="author" formControlName="author" />
+    <input type="text" id="author" formControlName="author" class="form-control" />
   </div>
 
   <!-- Year Released Field -->
   <div class="form-group">
-    <label for="year">Year Released</label>
-    <input type="text" id="year" formControlName="year" />
+    <label for="yearReleased">Year Released</label>
+    <input type="text" id="yearReleased" formControlName="yearReleased" class="form-control" />
   </div>
 
-  <!-- Submit Button (Add or Update) -->
-  <button type="submit">Update</button>
-
-  <!-- Delete Button (Always Displayed Now) -->
-  <button type="button" (click)="onDelete()">Delete</button>
-
-  <!-- Back Button -->
-  <button type="button" (click)="navigateToBookList()">Back to List</button>
+  <!-- Buttons -->
+  <div class="button-group">
+    <button type="submit" class="btn btn-primary">Update</button>
+    <button type="button" (click)="onDelete()" class="btn btn-danger">Delete</button>
+    <button type="button" (click)="navigateToBookList()" class="btn btn-secondary">Back to List</button>
+  </div>
 </form>

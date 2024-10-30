@@ -63,8 +63,9 @@ export class ModifyListItemComponent implements OnInit{
     this.router.navigate(['/book']);
   }
 
-  onDelete(): void {
-    const id = this.bookForm.get('id')?.value;
+  onDelete(): void { //Aha Here! You said .get('id') but you dont have that, changed to title
+    const id = this.bookForm.get('title')?.value;
+    console.log(id);
     if (id) {
       this.bookService.deleteBook(id);
       this.router.navigate(['/book']);

@@ -22,6 +22,7 @@ export class BookService {
 //Removed .id and added .title - Matt
   //Update an Existing book
   updateStudent(updatedBook: Book): Observable<Book[]> {
+    console.log(updatedBook)
     const index = this.books.findIndex(book => book.title === updatedBook.title);
     if (index !== -1) {
       this.books[index] = updatedBook;
@@ -30,9 +31,10 @@ export class BookService {
   }
   //Delete: Remove a book by ID
   //Changed input parameter from bookID to bookTitle - Matt
-  deleteBook(bookTitle : string): Observable<Book[]> {
+  deleteBook(bookTitle : string):void { //Trying to return a deleted object is weird, changed to void
+    console.log(bookTitle)
     this.books = this.books.filter(book => book.title !== bookTitle);
-    return of(this.books);
+
   }
   //changed bookID to bokTitle - Matt
   //Changed function name to getBookByTitle - Matt
