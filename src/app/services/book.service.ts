@@ -31,9 +31,9 @@ export class BookService {
   }
   //Delete: Remove a book by ID
   //Changed input parameter from bookID to bookTitle - Matt
-  deleteBook(bookTitle : string):void { //Trying to return a deleted object is weird, changed to void
-    console.log(bookTitle)
-    this.books = this.books.filter(book => book.title !== bookTitle);
+  deleteBook(bookTitle : string):void { //Trying to return a deleted object is weird, changed to void - Matt
+    //added in toLowerCase() to make it case insensitive - Matt
+    this.books = this.books.filter(book => book.title.toLowerCase() !== bookTitle.toLowerCase());
 
   }
   //changed bookID to bokTitle - Matt
