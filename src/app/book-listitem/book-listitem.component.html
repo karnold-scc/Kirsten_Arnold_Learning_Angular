@@ -3,5 +3,5 @@
   <h3 class = "book-genre">{{book.genre}}</h3>
   <h3 class = "book-author">{{book.author}}</h3>
   <h3 class = "book-year-released">{{book.yearReleased}}</h3>
-  <img ngSrc = "../shared/book.jpg" width="200" height="200" priority>
+  <img [src] = 'book.image' alt="Image of a book" width="250" height="300">
 </div>

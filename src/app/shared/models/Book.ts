@@ -3,4 +3,5 @@ export interface Book {
   genre:string,
   author:string,
   yearReleased:number
+  image?:string
 }
