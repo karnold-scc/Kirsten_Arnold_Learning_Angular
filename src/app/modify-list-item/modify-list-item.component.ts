@@ -52,15 +52,23 @@ export class ModifyListItemComponent implements OnInit{
   onSubmit(): void {
     const book: Book = this.bookForm.value;
 
-    // Check if we're updating an existing student
+    // Check if we're updating an existing book
     if (book.title) {
-      this.bookService.updateStudent(book);
-    } else {
-      // For adding a new student, generate a new ID
-      this.bookService.addBook(book);
+      this.bookService.getBookByTitle(book.title).subscribe(existingBook => {
+        if (existingBook) {
+          //book exists, so we update it
+          this.bookService.updateBook(book).subscribe(()=> {
+            this.router.navigate(['/book']);
+          });
+        }
+        else {
+          //book does NOT already exist, so we add it
+          this.bookService.addBook(book).subscribe(()=> {
+            this.router.navigate(['/book']);
+          });
+        }
+      });
     }
-
-    this.router.navigate(['/book']);
   }
 
   onDelete(): void { //Aha Here! You said .get('id') but you dont have that, changed to title

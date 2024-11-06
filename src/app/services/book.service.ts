@@ -21,7 +21,8 @@ export class BookService {
   }
 //Removed .id and added .title - Matt
   //Update an Existing book
-  updateStudent(updatedBook: Book): Observable<Book[]> {
+  //Changed name from updateStudent to updateBook
+  updateBook(updatedBook: Book): Observable<Book[]> {
     console.log(updatedBook)
     const index = this.books.findIndex(book => book.title === updatedBook.title);
     if (index !== -1) {
