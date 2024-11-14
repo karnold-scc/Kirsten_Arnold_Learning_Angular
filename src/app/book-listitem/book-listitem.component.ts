@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Book} from "../shared/models/Book";
-import {NgIf, NgOptimizedImage} from "@angular/common";
+import {CurrencyPipe, DatePipe, NgIf, NgOptimizedImage, UpperCasePipe} from "@angular/common";
 //import {NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -8,7 +8,10 @@ import {NgIf, NgOptimizedImage} from "@angular/common";
   standalone: true,
   imports: [
     NgIf,
-    NgOptimizedImage
+    NgOptimizedImage,
+    UpperCasePipe,
+    DatePipe,
+    CurrencyPipe
   ],
   templateUrl: './book-listitem.component.html',
   styleUrl: './book-listitem.component.css'
