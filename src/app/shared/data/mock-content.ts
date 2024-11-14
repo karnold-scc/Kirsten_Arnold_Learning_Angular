@@ -4,7 +4,7 @@ import { Book } from '../models/Book';
 export const bookList: Book[] = [
   {
     title: "Harry Potter",
-    genre: "Fantasy",
+    genre: "YA Fantasy",
     author: "J.K. Rowling",
     yearReleased: new Date(1997, 6, 26),
     price: 16.99

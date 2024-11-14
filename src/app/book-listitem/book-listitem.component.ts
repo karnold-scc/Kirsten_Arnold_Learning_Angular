@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Book} from "../shared/models/Book";
 import {CurrencyPipe, DatePipe, NgIf, NgOptimizedImage, UpperCasePipe} from "@angular/common";
+import {GenrePipe} from "../pipes/genre.pipe";
 //import {NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -11,7 +12,8 @@ import {CurrencyPipe, DatePipe, NgIf, NgOptimizedImage, UpperCasePipe} from "@an
     NgOptimizedImage,
     UpperCasePipe,
     DatePipe,
-    CurrencyPipe
+    CurrencyPipe,
+    GenrePipe
   ],
   templateUrl: './book-listitem.component.html',
   styleUrl: './book-listitem.component.css'

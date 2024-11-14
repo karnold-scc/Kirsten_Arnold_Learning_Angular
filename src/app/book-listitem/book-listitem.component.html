@@ -1,6 +1,6 @@
 <div *ngIf="book" class = "book-list-item">
   <h3 class = "book-title">{{book.title | uppercase}}</h3>
-  <h3 class = "book-genre">{{book.genre}}</h3>
+  <h3 class = "book-genre">{{book.genre | genre}}</h3>
   <h3 class = "book-author">{{book.author}}</h3>
   <h3 class = "book-year-released">{{book.yearReleased | date}}</h3>
   <h3 class = "book-genre">{{book.price | currency : "CAD"}}</h3>
