@@ -5,6 +5,7 @@ import {AsyncPipe, CommonModule, NgClass, NgForOf} from '@angular/common';
 import { BookService } from '../services/book.service';
 import { Observable } from 'rxjs';
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 
 @Component({
   selector: 'app-book-list',
@@ -16,7 +17,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     NgClass,
     AsyncPipe,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    HoverHighlightDirective
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'
