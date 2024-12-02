@@ -6,6 +6,8 @@ import { BookService } from '../services/book.service';
 import { Observable } from 'rxjs';
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-book-list',
@@ -18,7 +20,9 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     AsyncPipe,
     RouterLink,
     RouterLinkActive,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    MatButtonModule,
+    MatIconModule
   ],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css'

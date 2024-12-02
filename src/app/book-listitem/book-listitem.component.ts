@@ -3,6 +3,8 @@ import {Book} from "../shared/models/Book";
 import {CurrencyPipe, DatePipe, NgIf, NgOptimizedImage, UpperCasePipe} from "@angular/common";
 import {GenrePipe} from "../pipes/genre.pipe";
 import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
 //import {NgOptimizedImage} from "@angular/common";
 
 @Component({
@@ -15,7 +17,9 @@ import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
     DatePipe,
     CurrencyPipe,
     GenrePipe,
-    HoverHighlightDirective
+    HoverHighlightDirective,
+    MatCardModule,
+    MatListModule
   ],
   templateUrl: './book-listitem.component.html',
   styleUrl: './book-listitem.component.css'

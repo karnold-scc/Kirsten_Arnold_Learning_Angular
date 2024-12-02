@@ -1,33 +1,33 @@
 <!-- modify-book.component.html -->
 <form class="book-form" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
   <!-- Title Field -->
-  <div class="form-group">
-    <label for="title">Title</label>
-    <input appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="title" formControlName="title" class="form-control"/>
-  </div>
+  <mat-form-field class="form-group">
+    <mat-label>Title</mat-label>
+    <input matInput appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="title" formControlName="title" class="form-control"/>
+  </mat-form-field>
 
   <!-- Genre Field -->
-  <div class="form-group">
-    <label for="genre">Genre</label>
-    <input appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="genre" formControlName="genre" class="form-control" />
-  </div>
+  <mat-form-field class="form-group">
+    <mat-label>Genre</mat-label>
+    <input matInput appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="genre" formControlName="genre" class="form-control" />
+  </mat-form-field>
 
   <!-- Author Field -->
-  <div class="form-group">
-    <label for="author">Author</label>
-    <input appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="author" formControlName="author" class="form-control" />
-  </div>
+  <mat-form-field class="form-group">
+    <mat-label>Author</mat-label>
+    <input matInput appFocusHighlight="lemonChiffon" type="text" id="author" formControlName="author" class="form-control" />
+  </mat-form-field>
 
   <!-- Year Released Field -->
-  <div class="form-group">
-    <label for="yearReleased">Year Released</label>
-    <input appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="yearReleased" formControlName="yearReleased" class="form-control" />
-  </div>
+  <mat-form-field class="form-group">
+    <mat-label>Year Released</mat-label>
+    <input matInput appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="yearReleased" formControlName="yearReleased" class="form-control" />
+  </mat-form-field>
 
   <!-- Buttons -->
   <div class="button-group">
-    <button type="submit" class="btn btn-primary">Update</button>
-    <button type="button" (click)="onDelete()" class="btn btn-danger">Delete</button>
-    <button type="button" (click)="navigateToBookList()" class="btn btn-secondary">Back to List</button>
+    <button mat-stroked-button type="submit" class="btn btn-primary">Update</button>
+    <button type="button" (click)="onDelete()" class="btn btn-danger" mat-fab><mat-icon>delete</mat-icon></button>
+    <button mat-flat-button type="button" (click)="navigateToBookList()" class="btn btn-secondary">Back to List</button>
   </div>
 </form>
