@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core';
 import {Book} from "../shared/models/Book";
 import {CurrencyPipe, DatePipe, NgIf, NgOptimizedImage, UpperCasePipe} from "@angular/common";
 import {GenrePipe} from "../pipes/genre.pipe";
-import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+//import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 //import {NgOptimizedImage} from "@angular/common";
@@ -17,7 +17,6 @@ import {MatListModule} from "@angular/material/list";
     DatePipe,
     CurrencyPipe,
     GenrePipe,
-    HoverHighlightDirective,
     MatCardModule,
     MatListModule
   ],

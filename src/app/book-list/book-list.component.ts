@@ -5,7 +5,7 @@ import {AsyncPipe, CommonModule, NgClass, NgForOf} from '@angular/common';
 import { BookService } from '../services/book.service';
 import { Observable } from 'rxjs';
 import {RouterLink, RouterLinkActive} from "@angular/router";
-import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
+//import {HoverHighlightDirective} from "../directives/hover-highlight.directive";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 
@@ -20,7 +20,6 @@ import {MatIconModule} from "@angular/material/icon";
     AsyncPipe,
     RouterLink,
     RouterLinkActive,
-    HoverHighlightDirective,
     MatButtonModule,
     MatIconModule
   ],

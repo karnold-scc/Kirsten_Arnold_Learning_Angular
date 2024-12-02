@@ -1,12 +1,13 @@
-<mat-card *ngIf="book" class = "book-list-item" [appHoverHighlight]="'lightcyan'">
+<mat-card *ngIf="book" class = "book-list-item" >
   <mat-card-header class = "book-title">{{book.title | uppercase}}</mat-card-header>
   <mat-card-content>
+    <img ngSrc = "../shared/book.jpg" alt="Book" width="200" height="200" priority>
     <mat-list>
   <mat-list-item class = "book-genre">{{book.genre | genre}}</mat-list-item>
   <mat-list-item class = "book-author">{{book.author}}</mat-list-item>
   <mat-list-item class = "book-year-released">{{book.yearReleased | date}}</mat-list-item>
   <mat-list-item class = "book-genre">{{book.price | currency : "CAD"}}</mat-list-item>
-    <img ngSrc = "../shared/book.jpg" alt="Book" width="200" height="200" priority>
+
     </mat-list>
   </mat-card-content>
 </mat-card>

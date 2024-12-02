@@ -1,6 +1,6 @@
 
 <div *ngFor="let book of bookList; let i=index">
-  <mat-icon fontIcon="book">book</mat-icon>
+  <mat-icon svgIcon="book" aria-hidden="false"></mat-icon>
   <app-book-listitem [book]="book" [ngClass]="{'even-item' : i%2 === 0, 'odd-item' : i%2 === 1}"
   ></app-book-listitem>
 </div>

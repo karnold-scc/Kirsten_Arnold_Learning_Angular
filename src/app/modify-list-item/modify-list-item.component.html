@@ -1,33 +1,43 @@
 <!-- modify-book.component.html -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />
+<style>
+  .material-symbols-outlined {
+    font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+  }
+</style>
 <form class="book-form" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
   <!-- Title Field -->
   <mat-form-field class="form-group">
     <mat-label>Title</mat-label>
-    <input matInput appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="title" formControlName="title" class="form-control"/>
+    <input matTooltip="The Title of the Book" matInput type="text" id="title" formControlName="title" class="form-control"/>
   </mat-form-field>
 
   <!-- Genre Field -->
   <mat-form-field class="form-group">
     <mat-label>Genre</mat-label>
-    <input matInput appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="genre" formControlName="genre" class="form-control" />
+    <input matInput matTooltip="What genre is this book?" type="text" id="genre" formControlName="genre" class="form-control" />
   </mat-form-field>
 
   <!-- Author Field -->
   <mat-form-field class="form-group">
     <mat-label>Author</mat-label>
-    <input matInput appFocusHighlight="lemonChiffon" type="text" id="author" formControlName="author" class="form-control" />
+    <input matInput matTooltip="Who wrote this book?"  type="text" id="author" formControlName="author" class="form-control" />
   </mat-form-field>
 
   <!-- Year Released Field -->
   <mat-form-field class="form-group">
     <mat-label>Year Released</mat-label>
-    <input matInput appHighlightOnFocus appFocusHighlight="lemonChiffon" type="text" id="yearReleased" formControlName="yearReleased" class="form-control" />
+    <input matInput matTooltip="When the book was released." type="text" id="yearReleased" formControlName="yearReleased" class="form-control" />
   </mat-form-field>
 
   <!-- Buttons -->
   <div class="button-group">
-    <button mat-stroked-button type="submit" class="btn btn-primary">Update</button>
-    <button type="button" (click)="onDelete()" class="btn btn-danger" mat-fab><mat-icon>delete</mat-icon></button>
-    <button mat-flat-button type="button" (click)="navigateToBookList()" class="btn btn-secondary">Back to List</button>
+    <button mat-stroked-button matTooltip="Submit my Changes!!" type="submit" class="btn btn-primary">Update</button>
+    <button type="button" matTooltip="Delete This Book (FOREVER!!)" (click)="onDelete()" class="btn btn-danger" mat-fab><mat-icon class="material-symbols-outlined" svgIcon="delete">delete</mat-icon></button>
+    <button mat-flat-button matTooltip="Return to list." type="button" (click)="navigateToBookList()" class="btn btn-secondary">Back to List</button>
   </div>
 </form>

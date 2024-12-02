@@ -5,10 +5,11 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf} from "@angular/common";
 import {catchError, map, of, switchMap} from "rxjs";
-import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
+//import {HighlightOnFocusDirective} from "../directives/highlight-on-focus.directive";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
-
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {MatIconModule} from "@angular/material/icon";
 @Component({
   selector: 'app-modify-book',
   standalone: true,
@@ -16,9 +17,10 @@ import {MatButtonModule} from "@angular/material/button";
     FormsModule,
     NgIf,
     ReactiveFormsModule,
-    HighlightOnFocusDirective,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule,
+    MatIconModule
   ],
   templateUrl: './modify-list-item.component.html',
   styleUrl: './modify-list-item.component.css'

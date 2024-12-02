@@ -8,10 +8,11 @@ import {BookListComponent} from "./book-list/book-list.component";
 import {BookListitemComponent} from "./book-listitem/book-listitem.component";
 //import {BookService} from "./services/book.service";
 import {bookList} from "./shared/data/mock-content";
+import {MatListModule} from "@angular/material/list";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, ContentCardComponent, BookListComponent, BookListitemComponent, RouterLinkActive, RouterLink],
+  imports: [RouterOutlet, CommonModule, ContentCardComponent, BookListComponent, BookListitemComponent, RouterLinkActive, RouterLink, MatListModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
