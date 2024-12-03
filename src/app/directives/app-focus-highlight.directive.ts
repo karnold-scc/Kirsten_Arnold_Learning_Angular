@@ -16,7 +16,7 @@ export class AppFocusHighlightDirective {
   @HostListener('mouseleave'): This method is triggered when the mouse leaves the element. It calls the highlight method with an
   empty string, effectively removing the background color.
    */
-  @HostListener('focus') onMouseEnter() {
+  @HostListener('onFocus') onMouseEnter() {
     this.highlight(this.appHoverHighlight || 'yellow'); //Default colour just incase
   }
   @HostListener('blur') onMouseLeave() {
