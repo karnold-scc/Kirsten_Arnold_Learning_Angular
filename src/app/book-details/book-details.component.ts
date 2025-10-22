@@ -39,7 +39,7 @@ export class BookDetailsComponent implements OnInit{
   }
 
   goBack(){
-    this.router.navigate(['/books'])
+    this.router.navigate(['/book'])
   }
   goForward(){
     if(this.currentIndex < this.bookList.length-1){
