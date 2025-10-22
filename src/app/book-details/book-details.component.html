@@ -1,0 +1,11 @@
+<div *ngIf="book" class="book">
+  <h2>Student Details</h2>
+  <p><strong>ID:</strong> {{ book.id }}</p>
+  <p><strong>Title:</strong> {{ book.title}}</p>
+  <p><strong>Author</strong> {{ book.author }}</p>
+  <p><strong>Genre:</strong> {{ book.genre }}</p>
+  <p><strong>Released:</strong> {{ book.yearReleased}}</p>
+  <button (click) ="goBackward()" [disabled]="currentIndex === 0">Previous</button>
+  <button (click) ="goForward()" [disabled]="currentIndex === bookList.length-1">Next</button>
+  <button (click) ="goBack()">Back to Student List</button>
+</div>
